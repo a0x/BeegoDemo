@@ -19,5 +19,6 @@ func (c *MainController) HelloSitepoint() {
   c.Data["Website"] = "beego.me"
   c.Data["Email"] = "peng.edy@gmail.com"
   c.Data["EmailName"] = "Alvin Qi"
+  c.Data["Id"] = c.Ctx.Input.Param(":id")
   c.TplName = "default/hello-sitepoint.tpl"
 }
