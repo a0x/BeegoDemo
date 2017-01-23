@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-  orm.RegisterDriver("sqlite", orm.DR_Sqlite)
+  orm.RegisterDriver("sqlite", orm.DRSqlite)
   orm.RegisterDataBase("default", "sqlite3", "database/orm_test.db")
   orm.RegisterModel(new(models.Article))
 }

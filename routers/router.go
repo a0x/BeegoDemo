@@ -14,5 +14,5 @@ func init() {
     beego.Router("/manage/view", &controllers.ManageController{}, "get:View")
     beego.Router("/manage/home", &controllers.ManageController{}, "*:Home")
     beego.Router("/manage/delete/:id([0-9]+)", &controllers.ManageController{}, "*:Delete")
-    beego.Router("/manage/update/:id([0-9]+)"), &controllers.ManageController{}, "*:Update"
+    beego.Router("/manage/update/:id([0-9]+)", &controllers.ManageController{}, "*:Update")
 }

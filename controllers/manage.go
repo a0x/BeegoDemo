@@ -18,7 +18,7 @@ func (manage *ManageController) Home() {
   manage.LayoutSections = make(map[string]string)
   manage.LayoutSections["Header"] = "header.tpl"
   manage.LayoutSections["Footer"] = "footer.tpl"
-  manage.TplNames = "manage/home.tpl"
+  manage.TplName = "manage/home.tpl"
 }
 
 /**
@@ -29,7 +29,7 @@ func (manage *ManageController) Delete() {
   manage.LayoutSections = make(map[string]string)
   manage.LayoutSections["Header"] = "header.tpl"
   manage.LayoutSections["Footer"] = "footer.tpl"
-  manage.TplNames = "manage/home.tpl"
+  manage.TplName = "manage/home.tpl"
 
   // convert the string value to an int
   articleId, _ := strconv.Atoi(manage.Ctx.Input.Param(":id"))
@@ -89,7 +89,7 @@ func (manage *ManageController) View() {
   manage.LayoutSections = make(map[string]string)
   manage.LayoutSections["Header"] = "header.tpl"
   manage.LayoutSections["Footer"] = "footer.tpl"
-  manage.TplNames = "manage/view.tpl"
+  manage.TplName = "manage/view.tpl"
 
   flash := beego.ReadFromRequest(&manage.Controller)
 
@@ -120,7 +120,7 @@ func (manage *ManageController) Add() {
   manage.LayoutSections = make(map[string]string)
   manage.LayoutSections["Header"] = "header.tpl"
   manage.LayoutSections["Footer"] = "footer.tpl"
-  manage.TplNames = "manage/add.tpl"
+  manage.TplName = "manage/add.tpl"
 
   flash := beego.ReadFromRequest(&manage.Controller)
 
